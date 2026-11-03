@@ -39,6 +39,8 @@
             buttonSubmit = new Button();
             button1 = new Button();
             button2 = new Button();
+            textBox1 = new TextBox();
+            label4 = new Label();
             SuspendLayout();
             // 
             // monthCalendar1
@@ -109,6 +111,7 @@
             label3.Size = new Size(143, 20);
             label3.TabIndex = 6;
             label3.Text = "Номер телефона";
+            label3.Click += label3_Click;
             // 
             // buttonSubmit
             // 
@@ -140,11 +143,31 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(204, 413);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(216, 28);
+            textBox1.TabIndex = 12;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(31, 413);
+            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(143, 20);
+            label4.TabIndex = 11;
+            label4.Text = "Email";
+            // 
             // ElementForm
             // 
             AutoScaleDimensions = new SizeF(10F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(471, 546);
+            Controls.Add(textBox1);
+            Controls.Add(label4);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(buttonSubmit);
@@ -177,5 +200,7 @@
         private Button buttonSubmit;
         private Button button1;
         private Button button2;
+        private TextBox textBox1;
+        private Label label4;
     }
 }

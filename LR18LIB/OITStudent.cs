@@ -36,6 +36,12 @@ namespace LR18LIB
         public string Phone { get; set; }
 
         /// <summary>
+        /// Получает или устанавливает электронную почту студента.
+        /// </summary>
+        [DisplayName("Email")]
+        public string Email { get; set; }
+
+        /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="OITStudent"/> с пустыми значениями.
         /// </summary>
         public OITStudent() { }
@@ -47,12 +53,17 @@ namespace LR18LIB
         /// <param name="name">Полное имя студента (фамилия, имя, отчество).</param>
         /// <param name="birthDay">Дата рождения студента.</param>
         /// <param name="phone">Номер телефона студента.</param>
-        public OITStudent(string groupNumber, string name, DateTime birthDay, string phone)
+        public OITStudent(string groupNumber, string name, DateTime birthDay, string phone, string email)
         {
             GroupNumber = groupNumber;
             Name = name;
             BirthDay = birthDay;
             Phone = phone;
+            Email = email;
+        }
+
+        public OITStudent(string groupNumber, string name, DateTime birthDay, string phone) : this (groupNumber, name, birthDay, phone, null)
+        {
         }
 
         /// <summary>
