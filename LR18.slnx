@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="LR18FORM/LR18FORM.csproj" />
+  <Project Path="LR18LIB/LR18LIB.csproj" />
+  <Project Path="LR18Test/LR18Test.csproj" />
+</Solution>
