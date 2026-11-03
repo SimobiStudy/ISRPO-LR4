@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
@@ -162,6 +162,7 @@ namespace LR18LIB
 
             var scored = this.Select(s =>
             {
+                // Алгоритм поиска по номеру группы аналогичен поиску по имени, но с учетом особенностей формата номера группы.
                 var group = normalize(s.GroupNumber ?? string.Empty);
                 var groupParts = group.Split(' ', StringSplitOptions.RemoveEmptyEntries);
                 var score = 0;
@@ -212,6 +213,7 @@ namespace LR18LIB
             var loaded = JsonSerializer.Deserialize<List<OITStudent>>(File.ReadAllBytes(filePath));
             this.AddRange(loaded);
         }
+        
 
         /// <summary>
         /// Асинхронно загружает студентов из JSON-файла.
